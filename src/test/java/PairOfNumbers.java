@@ -11,14 +11,14 @@ public class PairOfNumbers {
 
         Integer[] intArr = {1, 2, -1, -2, 4, 5, -9, 0, 10, 40};
         int key = 4;
-        ArrayList<Integer> arr = new ArrayList<Integer>(Arrays.asList(intArr));
-        ArrayList<String> result = new ArrayList();
+        ArrayList<Integer> arr = new ArrayList<>(Arrays.asList(intArr));
+        ArrayList<String> result = new ArrayList<>();
         for(int i=0;i<arr.size();i++)
         {
             for(int j=i+1;j<arr.size();j++)
             {
 
-                if(arr.get(i)+arr.get(j) == key || arr.get(j)+arr.get(i) == key)
+                if(arr.get(i)+arr.get(j) == key)
                     result.add(arr.get(i).toString() +" , "+arr.get(j).toString());
                 else if(arr.get(i)-arr.get(j) == key || arr.get(j)-arr.get(i) == key)
                     result.add(arr.get(i).toString() +" , "+arr.get(j).toString());
@@ -41,7 +41,7 @@ public class PairOfNumbers {
 
         String[] requiredResult ={"1 , 4","1 , 5","2 , -2","-1 , 5","4 , 0","10 , 40"};
 
-        ArrayList requiredResultArr = new ArrayList(Arrays.asList(requiredResult));
+        ArrayList<Integer> requiredResultArr = new ArrayList(Arrays.asList(requiredResult));
 
 
         Assert.assertEquals(result,requiredResultArr);
